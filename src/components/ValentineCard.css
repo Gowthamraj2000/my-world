@@ -1,0 +1,151 @@
+.valentine-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.valentine-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.valentine-title {
+  color: #ff4757;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.gif-wrapper {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.valentine-gif {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yes-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ff4757);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid white;
+  min-width: 140px;
+  transition: all 0.3s;
+}
+
+.yes-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 71, 87, 0.4);
+}
+
+.no-btn {
+  background: #747d8c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid white;
+  min-width: 130px;
+  transition: all 0.3s;
+}
+
+.no-btn:hover {
+  background: #57606f;
+}
+
+.hearts-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  animation: float 6s infinite;
+}
+
+@keyframes float {
+  0% { top: 110%; opacity: 0; transform: rotate(0deg); }
+  50% { opacity: 0.8; transform: rotate(180deg); }
+  100% { top: -20%; opacity: 0; transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating Hearts Positions */
+.floating-heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.floating-heart:nth-child(2) { left: 15%; animation-delay: 1s; font-size: 30px; }
+.floating-heart:nth-child(3) { left: 25%; animation-delay: 2s; }
+.floating-heart:nth-child(4) { left: 35%; animation-delay: 3s; font-size: 25px; }
+.floating-heart:nth-child(5) { left: 45%; animation-delay: 4s; }
+.floating-heart:nth-child(6) { left: 55%; animation-delay: 5s; font-size: 35px; }
+.floating-heart:nth-child(7) { left: 65%; animation-delay: 0s; }
+.floating-heart:nth-child(8) { left: 75%; animation-delay: 1s; font-size: 30px; }
+.floating-heart:nth-child(9) { left: 85%; animation-delay: 2s; }
+.floating-heart:nth-child(10) { left: 95%; animation-delay: 3s; font-size: 25px; }
+
+@media (max-width: 768px) {
+  .valentine-title {
+    font-size: 2rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .yes-btn, .no-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
