@@ -57,7 +57,7 @@ const ValentineCard = ({ onYesClick }) => {
         
         <div className="gif-wrapper">
           <img 
-  src="/public/photos/img30.jpeg"  // Direct path to public folder
+  src="photos/img30.jpeg"  // Direct path to public folder
   alt="Cute valentine couple"
   className="valentine-gif"
 />
